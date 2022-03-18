@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'CircularStd';
+  src: url(./fonts/CircularStd-Bold.otf);
+  font-style: bold;
+  font-weight: 600;
+}
+
+:root {
+  /* FONTS AND TYPOGRAHPY */
+  --font-family: 'CircularStd';
+  --normal-font: 1.25rem;
+  --title-font: 2rem;
+
+  /* COLORS */
+
+  --body-color: hsl(50, 100%, 50%);
+  --hover-buttons: hsl(50, 0%, 0%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'CircularStd';
+}
+
+*::selection {
+  background-color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: var(--normal-font);
+  background-color: var(--body-color);
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--title-font);
+}
+
+span {
+  font-size: var(--normal-font);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  row-gap: 2.5rem;
+  padding: 100px 0;
+}
+#button-start,
+#button-end,
+#button-stop,
+#button-reset {
+  font-size: var(--normal-font);
+  background-color: transparent;
+  transition: 0.35s ease-in-out;
+  margin-top: 1.5rem;
+  padding: 15px 100px;
+}
+
+#button-start:hover,
+#button-end:hover,
+#button-reset:hover,
+#button-stop:hover {
+  background-color: var(--hover-buttons);
+  color: hsl(50, 100%, 50%);
+}
+
+#seconds,
+#tens {
+  pointer-events: none;
+}
